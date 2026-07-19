@@ -1,0 +1,56 @@
+{
+  "instance": {
+    "name": "ft10 (Fisher & Thompson, 1963)",
+    "num_jobs": 10,
+    "num_machines": 10,
+    "num_operations": 100,
+    "trivial_lower_bound": 655
+  },
+  "cp_sat_optimal": {
+    "status": "OPTIMAL",
+    "makespan": 930,
+    "lower_bound": 930,
+    "proven_optimal": true,
+    "solve_time_seconds": 19.992
+  },
+  "spt_heuristic_baseline": {
+    "makespan": 1429,
+    "solve_time_seconds": 0.00053
+  },
+  "improvement": {
+    "makespan_reduction_pct": 34.92,
+    "makespan_reduction_units": 499
+  },
+  "bottleneck_analysis_optimal_schedule": {
+    "bottleneck_machine": 3,
+    "bottleneck_utilization_pct": 67.85,
+    "bottleneck_busy_time": 631,
+    "bottleneck_idle_time": 299,
+    "average_machine_utilization_pct": 54.94,
+    "critical_path_length_ops": 17,
+    "critical_path_machines": [
+      0,
+      4,
+      5,
+      7,
+      8
+    ],
+    "all_machine_utilization_pct": {
+      "M0": 53.01,
+      "M1": 58.92,
+      "M2": 59.78,
+      "M3": 67.85,
+      "M4": 57.42,
+      "M5": 44.73,
+      "M6": 52.8,
+      "M7": 53.66,
+      "M8": 57.1,
+      "M9": 44.09
+    }
+  },
+  "bottleneck_analysis_heuristic_schedule": {
+    "bottleneck_machine": 3,
+    "bottleneck_utilization_pct": 44.16,
+    "bottleneck_idle_time": 798
+  }
+}

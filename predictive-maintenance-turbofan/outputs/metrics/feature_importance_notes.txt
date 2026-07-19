@@ -1,0 +1,35 @@
+Top regression features:
+sensor_4_mean     0.673888
+sensor_9_mean     0.100516
+sensor_11_mean    0.084163
+sensor_14_mean    0.014424
+sensor_15_mean    0.012056
+sensor_7_mean     0.009366
+sensor_21_mean    0.008865
+sensor_12_mean    0.008534
+sensor_20_mean    0.007511
+sensor_2_mean     0.005706
+sensor_3_mean     0.005251
+sensor_13_mean    0.004898
+sensor_9          0.004188
+sensor_8_mean     0.003466
+sensor_14_std     0.003155
+
+Top classification features:
+sensor_4_mean     0.112090
+sensor_15_mean    0.087874
+sensor_11_mean    0.084535
+sensor_20_mean    0.078519
+sensor_17_mean    0.074968
+sensor_21_mean    0.065537
+sensor_12_mean    0.063889
+sensor_2_mean     0.051789
+sensor_7_mean     0.047615
+sensor_3_mean     0.044547
+sensor_11         0.040908
+sensor_4          0.028011
+sensor_12         0.021348
+sensor_15         0.019941
+sensor_9_mean     0.015529
+
+Note: rolling MEAN features dominate both models (~94% of total importance in the regressor), far ahead of rolling std, rolling trend, or raw instantaneous readings. Interpretation: with a 5-cycle window, the smoothed current level of a sensor is more informative than its instantaneous value (denoising helps) and more informative than its short-term slope (a 5-cycle trend is still fairly noisy). The rolling mean is doing most of the useful work; std and trend contribute secondary, refining signal on top of it. A natural next step would be testing a longer window to see if trend becomes more informative over a longer baseline.

@@ -1,0 +1,36 @@
+{
+  "roc_auc": 0.9912706293679889,
+  "default_threshold_0.5": {
+    "threshold": 0.5,
+    "precision": 0.6757493188010899,
+    "recall": 0.7469879518072289,
+    "f1": 0.709585121602289,
+    "confusion_matrix": [
+      [
+        12645,
+        119
+      ],
+      [
+        84,
+        248
+      ]
+    ]
+  },
+  "recall_prioritized": {
+    "threshold": 0.19123233661018285,
+    "precision": 0.4482758620689655,
+    "recall": 0.9006024096385542,
+    "f1": 0.5985985985985987,
+    "confusion_matrix": [
+      [
+        12396,
+        368
+      ],
+      [
+        33,
+        299
+      ]
+    ]
+  },
+  "warning_horizon_cycles": 30
+}
